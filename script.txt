@@ -1,0 +1,16 @@
+script_content <- "
+library(shiny)
+library(shinydashboard)
+library(DT)
+library(arules)
+library(rsconnect)
+
+df <- data.frame(
+  inventoryId = c('Billboard1', 'Billboard2', 'Billboard3', 'Billboard1', 'Billboard2'),
+  audienceType = c('Male', 'Female', 'Male', 'Female', 'Male'),
+  timeOfDay = c('Morning', 'Afternoon', 'Morning', 'Evening', 'Afternoon'),
+  impressions = c(100, 250, 150, 300, 400),
+  mediaCost = c(10, 20, 15, 30, 25)
+)
+
+writeLines(script_content, 'script.txt')
